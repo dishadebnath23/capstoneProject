@@ -14,6 +14,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpMethod;
 
 @Configuration
 @EnableMethodSecurity   // Enables @PreAuthorize
@@ -56,6 +57,7 @@ public class SecurityConfig {
                 // -------- AUTHORIZATION RULES --------
                 .authorizeHttpRequests(auth -> auth
                         // Public login endpoint
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/api/auth/login").permitAll()
 
                         .requestMatchers("/api/auth/register").hasRole("ADMIN")

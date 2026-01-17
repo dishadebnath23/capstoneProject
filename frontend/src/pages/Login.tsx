@@ -77,7 +77,7 @@ export default function Login() {
           color="text.secondary"
           mb={3}
         >
-          Secure Login
+          Secure Login with Trust
         </Typography>
 
         {/* 🔐 LOGIN FORM (UNCHANGED) */}

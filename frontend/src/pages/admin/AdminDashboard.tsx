@@ -39,7 +39,7 @@ export default function AdminDashboard() {
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Typography variant="h4" fontWeight={600} gutterBottom>
-          Admin Dashboard
+          Admin Frontpage 
         </Typography>
 
         <Typography variant="body2" color="text.secondary" mb={3}>
